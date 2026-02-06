@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Harshit Kandpal's personal page</title>
-  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/header.css') }}">
-  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/navbar.css') }}">
-  <link rel="stylesheet"    href="{{ url_for('static', filename='main/css/footer.css') }}">
-  <link rel="shortcut icon" href="{{ url_for('static', filename='main/images/favicon.ico') }}">
-  {% block extracss %}{% endblock %}
-  <script src="{{ url_for('static', filename='main/js/menubar.js') }}" defer></script>
-  {% block extrajs %}{% endblock %}
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Harshit Kandpal's personal page</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main/css/header.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main/css/navbar.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='main/css/footer.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='main/images/favicon.ico') }}"
+    />
+    {% block extracss %}{% endblock %}
+    <script
+      src="{{ url_for('static', filename='main/js/menubar.js') }}"
+      defer
+    ></script>
+    {% block extrajs %}{% endblock %}
+  </head>
 
-<body>
+  <body>
     <!-- The header  -->
     <header>
-      <img src="{{ url_for('static', filename='main/images/banner.jpg') }}" alt="A canyon with wavy rocks" loading="lazy">
+      <img
+        src="{{ url_for('static', filename='main/images/banner.jpg') }}"
+        alt="A canyon with wavy rocks"
+        loading="lazy"
+      />
     </header>
 
     <!-- The navigation bar -->
     <nav>
-      {% if user == 'Unknown' %} 
+      {% if user == 'Unknown' %}
       <h1 id="nav-header">HARSHIT KANDPAL</h1>
       {% else %}
       <h1 id="nav-header">Logged in as {{user}}</h1>
@@ -30,63 +49,62 @@
       <ul id="navbar-options">
         <li><a href="/home">Home</a></li>
         <li><a href="/projects">Projects</a></li>
-        <li><a href="{{ url_for('static', filename='main/images/Harshit_Kandpal_.pdf') }}" target="_blank">Resume</a></li>
         <li><a href="/chat">Chat</a></li>
 
-        {% if user == 'Unknown' %} 
+        {% if user == 'Unknown' %}
         <li><a href="/login">Login</a></li>
         {% else %}
         <li><a href="/logout">Logout</a></li>
         {% endif %}
-        
-        
-        <li><a href="https://www.linkedin.com/in/harshit-kandpal-8a1a50344" target="_blank">
-              <img src="{{url_for('static', filename='main/images/social-linkedin.png') }}" alt="Linkedin Icon" loading="lazy">
-            </a>
+
+        <li>
+          <a href="https://www.linkedin.com/in/hkandpal-cs" target="_blank">
+            <img
+              src="{{url_for('static', filename='main/images/social-linkedin.png') }}"
+              alt="Linkedin Icon"
+              loading="lazy"
+            />
+          </a>
         </li>
       </ul>
-      <img id="menu-bar" src="{{url_for('static', filename='main/images/menu-bar.png') }}" alt="Menubar Icon" loading="lazy">
+      <img
+        id="menu-bar"
+        src="{{url_for('static', filename='main/images/menu-bar.png') }}"
+        alt="Menubar Icon"
+        loading="lazy"
+      />
       <ul id="navbar-mobile">
         <li><a href="/home">Home</a></li>
         <li><a href="/projects">Projects</a></li>
-        <li><a href="{{ url_for('static', filename='main/images/Harshit_Kandpal_.pdf') }}" target="_blank">Resume</a></li>
+        <li>
+          <a
+            href="{{ url_for('static', filename='main/images/Harshit_Kandpal_.pdf') }}"
+            target="_blank"
+            >Resume</a
+          >
+        </li>
         <li><a href="/chat">Chat</a></li>
 
-        {% if user == 'Unknown' %} 
+        {% if user == 'Unknown' %}
         <li><a href="/login">Login</a></li>
         {% else %}
         <li><a href="/logout">Logout</a></li>
         {% endif %}
-        
-        <li><a href="https://www.linkedin.com/in/harshit-kandpal-8a1a50344" target="_blank">LinkedIn</a></li>
+
+        <li>
+          <a
+            href="https://www.linkedin.com/in/harshit-kandpal-8a1a50344"
+            target="_blank"
+            >LinkedIn</a
+          >
+        </li>
       </ul>
     </nav>
 
     <!-- The main content  -->
-    <main>
-      {% block maincontent %}{% endblock %}
-    </main>
+    <main>{% block maincontent %}{% endblock %}</main>
 
     <!-- The footer of the file -->
-    <footer>
-      © 2025 Harshit Kandpal
-    </footer>
-  
-</body>
-
+    <footer>© 2025 Harshit Kandpal</footer>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

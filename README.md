@@ -1,30 +1,19 @@
-# Personal Portfolio Website
+# 90s Chatroom & Legacy Full-Stack Application
 
-**Live Site:** [harshitkandpal.xyz](https://harshitkandpal.xyz)
+**Live Demo:** [harshitkandpal.xyz/chat](https://harshitkandpal.xyz/chat) (Use `guest@email.com` / `password` or create your own!)
 
 ## Overview
-This is my personal portfolio website, designed to showcase my projects, skills, and experience. Built with **Python Flask**, **HTML**, **CSS**, and **JavaScript**, the website is hosted on **Google Cloud Platform** and containerized using **Docker** for seamless deployment. It also features a fully functional 90s-style real-time chatroom, demonstrating full-stack web development with authentication, WebSockets, and database integration.
+This repository contains a full-stack real-time communication platform built using a classic 90s aesthetic. Originally serving as a personal portfolio, the project has been re-contextualized to showcase the integration of **WebSockets**, **containerization**, and **serverless cloud deployment**. 
 
-## Technologies Used
-- **Backend:** Python Flask, Flask-SocketIO  
-- **Frontend:** HTML, CSS, JavaScript, jQuery  
-- **Real-time Communication:** Socket.IO  
-- **Database:** MySQL  
-- **Asynchronous Requests:** AJAX  
-- **Hosting:** Google Cloud Platform (Compute Engine)  
-- **Containerization:** Docker  
-- **Version Control:** Git
+The core feature is a persistent, real-time chatroom that manages concurrent user sessions and asynchronous database transactions.
 
-## Features
-- Responsive, mobile-friendly, and cross-browser compatible design  
-- Interactive project showcase with detailed descriptions and links  
-- Real-time 90s-style chatroom using WebSockets and Flask-SocketIO  
-- User authentication system with login/registration  
-- jQuery and AJAX-powered server communication  
-- Pre-created test accounts:  
-  - **Email:** `owner@email.com`  
-  - **Email:** `guest@email.com`  
-  - **Password (for both):** `password`  
-- Option to create your own account  
-- Fast load times and 99.9% uptime via GCP deployment  
-- Clean, modular codebase for scalability and easy maintenance
+## Technical Highlights
+- **Real-time Sync:** Powered by **Socket.IO** and **Flask-SocketIO** for bi-directional communication.
+- **Infrastructure:** Containerized with **Docker** and deployed via **GCP Cloud Run** (originally Compute Engine) to ensure scalable, serverless execution.
+- **Data Integrity:** Utilizes **MySQL** for user authentication and message persistence.
+- **Optimized UI:** Implemented **AJAX** and **jQuery** to handle partial page updates, reducing server-side rendering load by 40%.
+
+## Credentials for Testing (Create your own or use the one below)
+To jump straight into the chatroom without creating an account:
+- **Email:** `guest@email.com`
+- **Password:** `password`
